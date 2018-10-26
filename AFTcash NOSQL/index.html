@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AFT Cash Register Home</title>
+</head>
+<body>
+
+
+  <br> <br> <p>Test</p>
+  <form action="/cashiers" method="POST">
+  <input type="text" placeholder="upc" name="upc" id="upc">
+  <button type="submit" onclick="saveUPCtoLocalStorage(upc.value())">Submit</button>
+  </form>
+
+
+
+<script>
+  function saveUPCtoLocalStorage(upc)
+  {
+    localStorage.setItem("itemUPC", upc);
+    console.log(upc);
+  }
+
+
+</script>
+
+  <br> <br> <p>Add new Customer</p>
+  <form action="/customers" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="number" placeholder="phone" name="phone">
+  <input type="number" placeholder="points" name="points">
+  <button type="submit">Submit</button>
+  </form>
+
+
+  <br> <br> <p>Add new Item</p>
+  <form action="/items" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="text" placeholder="type" name="type">
+  <input type="number" placeholder="upc" name="upc">
+  <input type="number" placeholder="price" name="price">
+  <button type="submit">Submit</button>
+  </form>
+
+  <br> <br> <p>Add new Cashier</p>
+  <form action="/cashiers" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="text" placeholder="password" name="password">
+  <button type="submit">Submit</button>
+  </form>
+
+
+  <br> <br> <p>test button</p>
+  <form action="/items" method="GET">
+  <button type="submit">Submit</button>
+  </form>
+
+
+
+
+
+  <!-- <a href="https://www.w3schools.com">manager_home.html</a> -->
+
+</body>
+</html>

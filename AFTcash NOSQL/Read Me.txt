@@ -1,0 +1,16 @@
+1. We used MLab 
+   	link: https://mlab.com/login/
+	username: aftcash
+	password: 100yaboihyd
+   
+   Please use the login to view our database for this project.
+
+2. You'll need to install Node.js to run the project
+	+ other needed modules in Node.js (with terminal install instructions)
+		- npm install express
+		- npm install body-parser
+		- npm install mongodb
+		- npm install ejs
+
+
+3. server.js is responsible for MongoDB connection.

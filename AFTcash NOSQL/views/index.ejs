@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Title of the Page-->
+    <title>AFT | Store App</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <div class="row">
+    <div class="col-4">
+      <br> <br> <p>Add new Customer</p>
+      <form action="/customers" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="number" placeholder="phone" name="phone">
+      <input type="number" placeholder="points" name="points">
+      <input type="text" placeholder="customer type" name="custType">
+      <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="col-4">
+      <br> <br> <p>Add new Item</p>
+      <form action="/items" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="type" name="type">
+      <input type="number" placeholder="upc" name="upc">
+      <input type="number" placeholder="price" name="price">
+      <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="col-4">
+      <br> <br> <p>Add new Cashier</p>
+      <form action="/cashiers" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="password" name="password">
+      <input type="number" placeholder="hourly rate" name="hourly rate">
+      <button type="submit">Submit</button>
+      </form>
+
+    </div>
+
+    <script>
+    function test()
+    {
+      .controller('detailsCtrl', function($scope,$http) {
+
+      $scope.items = [];
+
+      $http.get('/items').then(function(d)
+          {
+              console.log(d);
+              $scope.items= d.data;
+          },function(err)
+          {
+              console.log(err);            }
+      )
+
+  }
+    }
+    </script>
+
+
+
+
+  </div>
+
+
+<br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+  <div class='col-4'>
+  </div>
+  <div class='col-6'>
+    <a href="/">home</a> |
+    <a href="/views/view_customer.ejs">View Customer List</a> |
+    <a href="/views/view_items.ejs">View Item List</a> |
+    <a href="/views/view_cashiers.ejs">View Cashier List</a>
+
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Title of the Page-->
+    <title>AFT | Store App</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Bootstrap-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div>
+  Cashier List
+</div>
+
+<div class="row">
+  <div class="col-4">
+  </div>
+  <div class="col-6">
+    <ul class="customers">
+    <% for(var i=0; i<quotes.length; i++) {%>
+      <li class="customer">
+        <span>Name: <b><%= quotes[i].name %></b></span><br>
+        <span>hourly rate: <%= quotes[i].hourlyrate %></span><br>
+      </li>
+    <% } %>
+    </ul>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+  <div class="col-6">
+  </div>
+  <div class="col-6">
+    <a href="/">home</a>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>
